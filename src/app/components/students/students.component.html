@@ -1,0 +1,19 @@
+<p>students works!</p>
+
+<div class="list">
+    <tr>
+        <th>Legajo</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+    </tr>
+<button (click)="reload()"><span>Recargar</span></button>
+    <tr *ngFor="let student of alumnos">
+        <td>{{student.idStudent}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.lastName}}</td>
+        <button (click)="onselect(student)"><span><a
+                    routerLink="/details/{{student.idStudent}}">select</a></span></button>
+    </tr>
+    <button><a href="/add">Add student</a></button>
+</div>
+<router-outlet></router-outlet>

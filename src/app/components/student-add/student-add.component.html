@@ -1,0 +1,13 @@
+<div>
+    <label for="new-student">Nombre: </label>
+    <input id="new-student" type="text" #name />
+  
+    <label for="new-student">Apellido </label>
+    <input id="new-student" type="text" #lastName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" (click)="addStudent(name.value, lastName.value); name.value='';lastName.value=''">
+      add student
+    </button>
+    <button (click)="back()">go back</button>
+  </div>

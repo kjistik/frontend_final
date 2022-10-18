@@ -1,0 +1,12 @@
+<div *ngIf="student">
+    <div>
+        <input type="text" [(ngModel)]="student.name">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="student.lastName">
+    </div>
+    <button (click)="goBack()">
+        go back
+            </button>
+</div>
+

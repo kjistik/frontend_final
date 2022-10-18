@@ -1,0 +1,29 @@
+.navigation{
+    background-color: #FFF7E9 ;
+    margin-top: -1.25rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    height: 5.5em;
+}
+
+.cosa {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1.20rem;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: #555 !important;
+
+}
+
+a:active{
+    color:#ffffff !important;
+}
