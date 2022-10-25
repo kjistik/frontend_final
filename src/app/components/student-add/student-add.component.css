@@ -1,0 +1,20 @@
+.color {
+    background-color: #5F9DF7;
+}
+
+label {
+    width: 6rem;
+}
+
+.space {
+    height: 3rem;
+    background-color: #5F9DF7;
+}
+
+.input {
+    margin-left: 1rem;
+}
+
+.button {
+    margin-left: 7rem;
+}

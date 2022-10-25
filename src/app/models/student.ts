@@ -1,5 +1,6 @@
 export interface students {
     idStudent: any,
-    name: string,
-    lastName: string
+    active: boolean,
+    student_lastName: string,
+    student_name: string;
 }

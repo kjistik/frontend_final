@@ -1,0 +1,27 @@
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { subject } from 'src/app/models/subjects';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SubjectsService {
+
+  constructor(private http: HttpClient) { }
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
+  private subjectsURL = "http://localhost:8080/api/materias/todos"
+  private changeURL = "http://localhost:8080/api/materias/cambiar"
+
+  getSubjects(): Observable<subject[]> {
+    return this.http.get<subject[]>(this.subjectsURL)
+  }
+
+  changeSubject(subject: subject): Observable<any> {
+    return this.http.put(`${this.changeURL}/${subject.idSubject}`, subject, this.httpOptions)
+  }
+}

@@ -1,12 +1,10 @@
-<div *ngIf="student">
+<div *ngIf="student" class="fondo">
+
     <div>
-        <h1>legajo: {{student.idStudent}}</h1>
+        <h2>Nombre: {{student.student_name}}</h2>
     </div>
     <div>
-        <h2>Nombre: {{student.name}}</h2>
-    </div>
-    <div>
-        <h2>Apellido: {{student.lastName}}</h2>
+        <h2>Apellido: {{student.student_lastName}}</h2>
     </div>
     <button type="button" (click)="goBack()">go back</button>
     <button>

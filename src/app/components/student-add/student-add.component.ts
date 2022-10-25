@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { students } from 'src/app/models/student';
-import { StudentsService } from 'src/app/services/students.service';
+import { StudentsService } from 'src/app/services/students/students.service';
 import { Location } from '@angular/common';
 @Component({
   selector: 'app-student-add',
@@ -12,11 +12,12 @@ export class StudentAddComponent implements OnInit {
 
   constructor(private service: StudentsService, private location: Location) { }
 
-  addStudent(name: string, lastName: string) {
-    name = name.trim()
-    lastName = lastName.trim()
-    if (!name) { return; }
-    this.service.addStudent({ name, lastName } as students)
+  addStudent(student_name: string, student_lastName: string) {
+    student_name = student_name.trim()
+    student_lastName = student_lastName.trim()
+    const active = true
+    if (!student_name) { return; }
+    this.service.addStudent({ active, student_lastName, student_name } as students)
       .subscribe((student: students) => {
         this.students.push(student);
       });

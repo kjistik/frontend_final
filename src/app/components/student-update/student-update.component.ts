@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { students } from 'src/app/models/student';
-import { StudentsService } from 'src/app/services/students.service';
+import { StudentsService } from 'src/app/services/students/students.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
@@ -20,12 +20,20 @@ export class StudentUpdateComponent implements OnInit {
     this.service.getStudent(id)
       .subscribe(student => this.student = student);
   }
+   
+  changeStudent(): void {
+    if (this.student) {
+      this.service.changeStudent(this.student)
+        .subscribe(() => this.goBack());
+    }
+  }
+  
 
   goBack(): void {
     this.location.back()
   }
 
-  
+
   ngOnInit(): void {
     this.getStudent()
   }

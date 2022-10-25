@@ -1,12 +1,13 @@
-<div *ngIf="student">
-    <div>
-        <input type="text" [(ngModel)]="student.name">
+<div *ngIf="student" class="fondo">
+    <div class="input">
+        <label for="name">Nombre: <input id="name" type="text" [(ngModel)]="student.student_name"></label>
     </div>
-    <div>
-        <input type="text" [(ngModel)]="student.lastName">
+    <div class="input">
+        <label for="lastName">Apellido: <input id="lastName" type="text" [(ngModel)]="student.student_lastName"></label>
     </div>
-    <button (click)="goBack()">
+    <div class="division"></div>
+    <button class="lbutton" (click)="goBack()">
         go back
-            </button>
+    </button>
+    <button class="rbutton" (click)="changeStudent()">Cambiar</button>
 </div>
-

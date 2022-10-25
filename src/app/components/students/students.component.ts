@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { students } from 'src/app/models/student';
-import { StudentsService } from 'src/app/services/students.service';
+import { StudentsService } from 'src/app/services/students/students.service';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -21,6 +21,12 @@ export class StudentsComponent implements OnInit {
       .subscribe(students => this.alumnos = students)
   }
 
+  disable(student: students): void {
+    student.active = false;
+    this.service.changeStudent(student)
+      .subscribe();
+  }
+
   reload() {
     window.location.reload()
   }
@@ -30,5 +36,5 @@ export class StudentsComponent implements OnInit {
   ngOnInit(): void {
     this.getStudents()
   }
-
+  
 }
