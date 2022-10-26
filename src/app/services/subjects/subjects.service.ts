@@ -16,6 +16,7 @@ export class SubjectsService {
 
   private subjectsURL = "http://localhost:8080/api/materias/todos"
   private changeURL = "http://localhost:8080/api/materias/cambiar"
+  private addURL = "http://localhost:8080/api/materias/nuevo"
 
   getSubjects(): Observable<subject[]> {
     return this.http.get<subject[]>(this.subjectsURL)
@@ -23,5 +24,10 @@ export class SubjectsService {
 
   changeSubject(subject: subject): Observable<any> {
     return this.http.put(`${this.changeURL}/${subject.idSubject}`, subject, this.httpOptions)
+  }
+
+  addSubject(subject: subject): Observable<subject> {
+    return this.http.post<subject>(this.addURL, subject, this.httpOptions)
+      ;
   }
 }

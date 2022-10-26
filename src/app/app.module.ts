@@ -20,7 +20,7 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
     StudentUpdateComponent,
     StudentAddComponent,
     GradesComponent,
-    SubjectsComponent    
+    SubjectsComponent   
   ],
   imports: [
     BrowserModule,

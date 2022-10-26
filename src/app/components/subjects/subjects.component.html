@@ -1,14 +1,23 @@
 <div class="content">
     <h3 class="title">Lista de asignaturas: </h3>
-</div>
 
-<div class="list_background">
-    <div class="list" *ngFor="let subject of subjects">
-        <ul>
-            <li *ngIf="subject.idSubject==1">Asignatura: {{subject.subject_name</li>
-            
-            <button *ngIf="subject.idSubject==true" (click)="disable(subject)"><span>Eliminar</span></button>
-            <li *ngIf="subject.idSubject==false">Es falso</li>
-        </ul>
+    <div class="list_background">
 
-</div>
+        <div class="list" *ngFor="let subject of subjects">
+            <ul>
+                <li class="li item" *ngIf="subject.active==true">Asignatura: {{subject.subject_name}}</li>
+                <button class="li button" *ngIf="subject.active==true"
+                    (click)="disable(subject)"><span>Eliminar</span></button>
+            </ul>
+        </div>
+        <div *ngIf="flag==false">
+            <button class="add" (click)="triger()">Añadir</button>
+            <button class="add" (click)="goBack()">Back</button>
+        </div>
+        <div *ngIf="flag==true">
+            <label class="adding" for="input">Ingresar asignatura: <input id="input" type="text" #subject></label>
+            <button class="adding" (click)="addSubject(subject.value); subject.value=''">Añadir</button>
+        </div>
+        <button *ngIf="flag==true" class="back" (click)="goBack()">Back</button>
+
+    </div>
