@@ -18,7 +18,6 @@ export class StudentsService {
   private changeURL = "http://localhost:8080/api/alumnos/cambiar"
 
   getStudent(id: number) {
-
     return this.http.get<students>(`${this.studentURL}/${id}`);
   }
 

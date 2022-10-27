@@ -14,8 +14,8 @@
                 <td *ngIf="student.active==true" class="legajo">{{student.idStudent}}</td>
                 <td *ngIf="student.active==true" class="name">{{student.student_name}} </td>
                 <td *ngIf="student.active==true" class="name">{{student.student_lastName}}</td>
-                <button class="buttons" (click)="onselect(student)" *ngIf="student.active==true"><span><a
-                            routerLink="/details/{{student.idStudent}}">select</a></span></button>
+                <button class="buttons" *ngIf="student.active==true"><span><a
+                            routerLink="/details_student/{{student.idStudent}}">select</a></span></button>
                 <button class="buttons" *ngIf="student.active==true" (click)="disable(student)">Eliminar</button>
             </tr>
             <button class="button"><a href="/add">Add student</a></button>

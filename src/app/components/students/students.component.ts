@@ -12,10 +12,6 @@ export class StudentsComponent implements OnInit {
 
   alumnos: students[] = []
 
-  onselect(a: students) {
-    this.selected = a;
-  }
-
   getStudents(): void {
     this.service.getStudents()
       .subscribe(students => this.alumnos = students)
