@@ -18,7 +18,7 @@
                             routerLink="/details_student/{{student.idStudent}}">select</a></span></button>
                 <button class="buttons" *ngIf="student.active==true" (click)="disable(student)">Eliminar</button>
             </tr>
-            <button class="button"><a href="/add">Add student</a></button>
+            <button class="button"><a href="/add_student">Add student</a></button>
             <button class="button" (click)="reload()"><span>Recargar</span></button>
         </div>
     </div>

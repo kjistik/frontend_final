@@ -15,10 +15,10 @@
                 <td *ngIf="teacher.active==true" class="name">{{teacher.teacher_name}} </td>
                 <td *ngIf="teacher.active==true" class="name">{{teacher.teacher_lastName}}</td>
                 <button class="buttons" *ngIf="teacher.active==true"><span><a
-                            routerLink="/details/{{teacher.idTeacher}}">select</a></span></button>
+                            routerLink="/details_teacher/{{teacher.idTeacher}}">select</a></span></button>
                 <button class="buttons" *ngIf="teacher.active==true" (click)="disable(teacher)">Eliminar</button>
             </tr>
-            <button class="button"><a href="/add">Add Teacher</a></button>
+            <button class="button"><a href="/add_teacher">Add Teacher</a></button>
             <button class="button" (click)="reload()"><span>Recargar</span></button>
         </div>
     </div>
