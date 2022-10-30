@@ -1,5 +1,5 @@
 .content {
-    background-color: #5F9DF7;
+    background-color: #F2D388;
 }
 
 .title {
@@ -10,7 +10,7 @@
 }
 
 .list_background {
-    background-color: #EDEDED;
+    background-color: #ffe4c4;
     width: fit-content;
     height: fit-content;
     margin-left: 1.5rem;
@@ -28,6 +28,7 @@
 
 .list {
     padding: 2rem;
+    background-color: #ffe4c4;
 }
 
 .button {
@@ -49,11 +50,16 @@ label {
     width: 23rem;
 }
 
-.back{
+.back {
     margin-left: 4rem;
     margin-bottom: 0.5rem;
 }
 
-button{
+button {
     width: 5rem;
+    background-color: #fff8dc;
+}
+
+.display {
+    /*llenar mas tarde*/
 }

@@ -1,5 +1,9 @@
+.division {
+    background-color: #F2D388;
+}
+
 .fondo {
-    background-color: burlywood;
+    background-color: #fff8dc;
 }
 
 .input {
@@ -25,4 +29,8 @@ label {
 
 input {
     margin-left: 2rem;
+}
+
+button {
+    margin-bottom: 10px;
 }

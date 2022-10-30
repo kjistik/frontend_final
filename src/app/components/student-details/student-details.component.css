@@ -1,5 +1,5 @@
 .division {
-    background-color: #5F9DF7;
+    background-color: #F2D388;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
@@ -13,7 +13,7 @@ a {
 }
 
 .fondo {
-    background-color: burlywood;
+    background-color: #ffe4c4;
     padding-top: 20px;
     width: 95%;
     margin: auto;
@@ -25,7 +25,12 @@ a {
 }
 
 .info {
-    background-color: #EDEDED;
+    background-color: #fff8dc;
     margin: 0 5%;
     width: 90%;
+}
+
+button {
+    margin: 0 0 15px 20px;
+
 }

@@ -4,7 +4,7 @@
 }
 
 .division {
-    background-color: #5F9DF7;
+    background-color: #F2D388;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
@@ -18,7 +18,7 @@
 }
 
 .list_background {
-    background-color: #EDEDED;
+    background-color: #ffe4c4;
     width: fit-content;
     height: fit-content;
     margin: auto;
@@ -64,3 +64,8 @@ a {
     text-decoration: none;
     color: black;
 }
+
+button {
+    background-color: #fff8dc;
+}
+

@@ -5,9 +5,11 @@
 
         <div class="list" *ngFor="let subject of subjects">
             <ul>
-                <li class="li item" *ngIf="subject.active==true">Asignatura: {{subject.subject_name}}</li>
-                <button class="li button" *ngIf="subject.active==true"
-                    (click)="disable(subject)"><span>Eliminar</span></button>
+                <div class="display">
+                    <li class="li item" *ngIf="subject.active==true">Asignatura: {{subject.subject_name}}</li>
+                    <button class="li button" *ngIf="subject.active==true"
+                        (click)="disable(subject)"><span>Eliminar</span></button>
+                </div>
             </ul>
         </div>
         <div *ngIf="flag==false">
