@@ -18,6 +18,7 @@ export class StudentDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getStudent();
+    this.getGrades();
   }
   @Input() student?: students
 
@@ -31,6 +32,11 @@ export class StudentDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  getGrades() {
+    this.gradeService.getgrades()
+      .subscribe(grades => this.grades = grades)
   }
 
 }

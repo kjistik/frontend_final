@@ -1,13 +1,25 @@
-<div *ngIf="student" class="fondo">
+<div class="division">
+    <div *ngIf="student" class="fondo">
+        <div class="name">
+            <div>
+                <p><em>Nombre: {{student.student_name}}</em></p>
+            </div>
+            <div>
+                <p><em>Apellido: {{student.student_lastName}}</em></p>
+            </div>
+        </div>
+        <ul *ngFor="let grade of grades">
+            <div class="info" *ngIf="grade.grades_student.idStudent==student.idStudent">
+                <div>Asignatura: {{grade.grades_subject.subject_name}}
+                </div>
+                <div>Caificación: {{grade.grade}}</div>
+                <div>Docente: {{grade.grades_teacher.teacher_name}} {{grade.grades_teacher.teacher_lastName}}</div>
+            </div>
+        </ul>
+        <button type="button" (click)="goBack()">go back</button>
+        <button>
+            <span>
+                <a routerLink="/update/{{student.idStudent}}">edit</a></span></button>
 
-    <div>
-        <h2>Nombre: {{student.student_name}}</h2>
     </div>
-    <div>
-        <h2>Apellido: {{student.student_lastName}}</h2>
-    </div>
-    <button type="button" (click)="goBack()">go back</button>
-    <button>
-        <span>
-            <a routerLink="/update/{{student.idStudent}}">edit</a></span></button>
 </div>

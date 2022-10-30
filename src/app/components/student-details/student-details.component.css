@@ -1,3 +1,12 @@
+.division {
+    background-color: #5F9DF7;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: auto;
+    height: max-content;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -5,4 +14,18 @@ a {
 
 .fondo {
     background-color: burlywood;
+    padding-top: 20px;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.info {
+    background-color: #EDEDED;
+    margin: 0 5%;
+    width: 90%;
 }
