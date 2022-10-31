@@ -1,0 +1,24 @@
+<div *ngIf="!flag1">
+    <select [(ngModel)]="subject">
+        <option *ngFor="let s of subjects" [ngValue]="s">{{s.subject_name}}</option>
+    </select>
+    <button (click)="changeFlag1()">siguiente</button>
+</div>
+
+<div *ngIf="flag1 && !flag2 && subject">
+    <select [(ngModel)]="teacher">
+        <ng-container *ngFor="let t of teachers">
+            <option *ngIf="t.subject_teacher.idSubject==subject.idSubject && t.active==true" [ngValue]="t">{{t.teacher_name}}
+                {{t.teacher_lastName}}</option>
+        </ng-container>
+    </select>
+    <button (click)="changeFlag2()">siguiente</button>
+</div>
+
+<div *ngIf="flag2">
+    <select [(ngModel)]="grade">
+        <option *ngFor="let g of numbers" [ngValue]="g">{{g}}</option>
+    </select>
+
+    <button *ngIf="student && subject && teacher" (click)="addGrade(grade ,student, subject, teacher)">añadir</button>
+</div>

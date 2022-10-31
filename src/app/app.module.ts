@@ -12,6 +12,9 @@ import { StudentAddComponent } from './components/student-add/student-add.compon
 import { GradesComponent } from './grades/grades.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { TeachersComponent } from './components/teachers/teachers.component';
+import { StudentGradeComponent } from './components/student-grade/student-grade.component';
+import { TeacherDetailsComponent } from './components/teacher-details/teacher-details.component';
+import { TeacherAddComponent } from './components/teacher-add/teacher-add.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { TeachersComponent } from './components/teachers/teachers.component';
     StudentAddComponent,
     GradesComponent,
     SubjectsComponent,
-    TeachersComponent   
+    TeachersComponent,
+    StudentGradeComponent,
+    TeacherDetailsComponent,
+    TeacherAddComponent   
   ],
   imports: [
     BrowserModule,

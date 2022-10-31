@@ -18,3 +18,14 @@ label {
 .button {
     margin-left: 7rem;
 }
+
+.select {
+    margin-left: 1rem;
+    display: inline;
+}
+
+select {
+    margin-left: 0.7rem;
+    width: 13.5rem;
+    display: inline;
+}

@@ -19,7 +19,12 @@
         <button type="button" (click)="goBack()">go back</button>
         <button>
             <span>
-                <a routerLink="/update/{{student.idStudent}}">edit</a></span></button>
+                <a routerLink="/students_update/{{student.idStudent}}">edit</a></span>
+        </button>
+        <button>
+            <span>
+                <a routerLink="/grade/{{student.idStudent}}">Add grade</a></span>
+        </button>
 
     </div>
 </div>

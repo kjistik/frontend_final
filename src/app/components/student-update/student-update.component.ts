@@ -28,7 +28,6 @@ export class StudentUpdateComponent implements OnInit {
     }
   }
   
-
   goBack(): void {
     this.location.back()
   }

@@ -14,8 +14,10 @@ export class TeachersService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  teachersURL = "http://localhost:8080/api/docentes/todos"
-  changeURL = "http://localhost:8080/api/docentes/cambiar"
+  private teachersURL = "http://localhost:8080/api/docentes/todos"
+  private changeURL = "http://localhost:8080/api/docentes/cambiar"
+  private teacherURL = "http://localhost:8080/api/docentes/uno"
+  private addURL = "http://localhost:8080/api/docentes/nuevo"
 
   getTeachers(): Observable<teachers[]> {
     return this.http.get<teachers[]>(this.teachersURL)
@@ -23,6 +25,14 @@ export class TeachersService {
 
   changeTeacher(teacher: teachers): Observable<any> {
     return this.http.put(`${this.changeURL}/${teacher.idTeacher}`, teacher, this.httpOptions)
+  }
+
+  getTeacher(id: number) {
+    return this.http.get<teachers>(`${this.teacherURL}/${id}`);
+  }
+
+  addTeacher(teacher: teachers): Observable<teachers> {
+    return this.http.post<teachers>(this.addURL, teacher, this.httpOptions);
   }
 
 }
