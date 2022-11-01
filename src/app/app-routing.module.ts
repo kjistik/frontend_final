@@ -7,9 +7,9 @@ import { StudentUpdateComponent } from './components/student-update/student-upda
 import { StudentAddComponent } from './components/student-add/student-add.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { TeachersComponent } from './components/teachers/teachers.component';
-import { StudentGradeComponent } from './components/student-grade/student-grade.component';
 import { TeacherDetailsComponent } from './components/teacher-details/teacher-details.component';
 import { TeacherAddComponent } from './components/teacher-add/teacher-add.component';
+import { TeacherUpdateComponent } from './components/teacher-update/teacher-update.component';
 
 const routes: Routes = [
   { path: 'students', component: StudentsComponent },
@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: 'add_student', component: StudentAddComponent },
   { path: 'subjects', component: SubjectsComponent },
   { path: 'teachers', component: TeachersComponent },
-  { path: 'grade/:id', component: StudentGradeComponent },
   { path: 'teacher_details/:id', component: TeacherDetailsComponent },
   { path: 'add_teacher', component: TeacherAddComponent }
 ];

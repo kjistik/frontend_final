@@ -11,27 +11,31 @@ import { Location } from '@angular/common';
 
 export class SubjectsComponent implements OnInit {
 
-  constructor(private service: SubjectsService, private location:Location) { }
+  constructor(private service: SubjectsService, private location: Location) { }
 
   ngOnInit(): void {
     this.getSubjects()
   }
 
-
-
   subjects: subject[] = []
 
   flag: boolean = false;
+
+  subject?: subject
+
+  materia?: subject
 
   getSubjects(): void {
     this.service.getSubjects()
       .subscribe(subjects => this.subjects = subjects)
   }
 
-  disable(subject: subject): void {
-    subject.active = false
-    this.service.changeSubject(subject)
-      .subscribe();
+  disable(s: subject): void {
+    if (s) {
+      s.active = false;
+      this.service.changeSubject(s)
+      .subscribe()
+    }
   }
 
   triger(): void {
@@ -40,15 +44,17 @@ export class SubjectsComponent implements OnInit {
 
   addSubject(subject_name: string) {
     subject_name = subject_name.trim()
-    const active = true;
-    if (!subject_name) {return;}
-    this.service.addSubject({active, subject_name} as subject)
-    .subscribe((subject:subject)=>{
-      this.subjects.push(subject);
-    });
+    var active = true;
+    if (!subject_name) { return; }
+    this.service.addSubject({ active, subject_name } as subject)
+      .subscribe((subject: subject) => {
+        this.subjects.push(subject);
+      });
   }
 
-  goBack(){
+  goBack() {
     this.location.back()
   }
+
+
 }

@@ -8,6 +8,9 @@
                 <p><em>Apellido: {{teacher.teacher_lastName}}</em></p>
             </div>
         </div>
+        <div *ngIf="flag">
+            <app-teacher-update></app-teacher-update>
+        </div>
         <ul *ngFor="let grade of grades">
             <div class="info" *ngIf="grade.grades_teacher.idTeacher==teacher.idTeacher">
                 <div>Asignatura: {{grade.grades_subject.subject_name}}
@@ -16,10 +19,10 @@
                 <div>Alumno: {{grade.grades_student.student_name}} {{grade.grades_student.student_lastName}}</div>
             </div>
         </ul>
-        <button type="button">go back</button>
+        <button type="button">Volver</button>
         <button>
             <span>
-                <a routerLink="/teacher_update/{{teacher.idTeacher}}">edit</a></span>
+                <a (click)="changeFlag()">Editar</a></span>
         </button>
     </div>
 </div>

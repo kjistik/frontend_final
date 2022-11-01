@@ -24,6 +24,10 @@ export class StudentDetailsComponent implements OnInit {
 
   grades: grades[] = []
 
+  flag: boolean = false;
+
+  flag1: boolean = false;
+
   getStudent(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
     this.studentService.getStudent(id)
@@ -32,6 +36,16 @@ export class StudentDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  add() {
+    this.flag = true;
+    this.flag1 = false;
+  }
+
+  edit() {
+    this.flag = false;
+    this.flag1 = true;
   }
 
   getGrades() {

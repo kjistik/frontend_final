@@ -10,13 +10,15 @@
   </div>
   <label for="subject" class="select">Asignatura:
     <select id="subject" [(ngModel)]="subject">
-      <option *ngFor="let s of subjects" [ngValue]="s">{{s.subject_name}}</option>
+      <ng-container *ngFor="let s of subjects">
+        <option *ngIf="s.active" [ngValue]="s">{{s.subject_name}}</option>
+      </ng-container>
     </select>
   </label>
   <div class="button">
     <button type="button" *ngIf="subject"
       (click)="addTeacher(name.value, lastName.value, subject); name.value='';lastName.value=''">
-      add teachers
+      Nuevo docente
     </button>
-    <button (click)="back()">go back</button>
+    <button (click)="back()">Volver</button>
   </div>

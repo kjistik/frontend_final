@@ -7,3 +7,15 @@ html {
 * {
     box-sizing: border-box;
 }
+
+button {
+    background-color: #fff8dc;
+}
+
+select {
+    background-color: #fff8dc;
+}
+
+input {
+    background-color: #fff8dc;
+}

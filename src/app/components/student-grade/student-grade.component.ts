@@ -90,10 +90,7 @@ export class StudentGradeComponent implements OnInit {
         .subscribe((grade: grades) => {
           this.grades.push(grade);
         });
-    this.back()
+    window.location.reload()
   }
 
-  back() {
-    this.location.back()
-  }
 }

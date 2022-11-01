@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class TeacherDetailsComponent implements OnInit {
 
-  constructor(private location: Location, private gradesService: GradesService, 
+  constructor(private location: Location, private gradesService: GradesService,
     private route: ActivatedRoute, private teacherService: TeachersService) { }
 
   ngOnInit(): void {
@@ -22,6 +22,8 @@ export class TeacherDetailsComponent implements OnInit {
   }
 
   grades: grades[] = []
+
+  flag = false
 
   @Input() teacher?: teachers
 
@@ -38,5 +40,10 @@ export class TeacherDetailsComponent implements OnInit {
 
   goBack() {
     this.location.back()
+  }
+
+  changeFlag() {
+    this.flag = true
+    
   }
 }

@@ -13,8 +13,7 @@
     background-color: #ffe4c4;
     width: fit-content;
     height: fit-content;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin: auto;
 }
 
 .li {
@@ -58,8 +57,4 @@ label {
 button {
     width: 5rem;
     background-color: #fff8dc;
-}
-
-.display {
-    /*llenar mas tarde*/
 }

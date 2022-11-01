@@ -18,6 +18,8 @@ a {
     width: 95%;
     margin: auto;
     margin-top: 10px;
+    height: fit-content;
+    padding-bottom: 15px;
 }
 
 .name {
@@ -31,6 +33,5 @@ a {
 }
 
 button {
-    margin: 0 0 15px 20px;
-
+    margin-left: 20px;
 }

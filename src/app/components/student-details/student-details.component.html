@@ -7,6 +7,12 @@
             <div>
                 <p><em>Apellido: {{student.student_lastName}}</em></p>
             </div>
+            <div *ngIf="flag">
+                <app-student-grade></app-student-grade>
+            </div>
+            <div *ngIf="flag1">
+                <app-student-update></app-student-update>
+            </div>
         </div>
         <ul *ngFor="let grade of grades">
             <div class="info" *ngIf="grade.grades_student.idStudent==student.idStudent">
@@ -16,14 +22,14 @@
                 <div>Docente: {{grade.grades_teacher.teacher_name}} {{grade.grades_teacher.teacher_lastName}}</div>
             </div>
         </ul>
-        <button type="button" (click)="goBack()">go back</button>
+        <button type="button" (click)="goBack()">Volver</button>
         <button>
             <span>
-                <a routerLink="/students_update/{{student.idStudent}}">edit</a></span>
+                <a (click)="edit()">Editar</a></span>
         </button>
         <button>
             <span>
-                <a routerLink="/grade/{{student.idStudent}}">Add grade</a></span>
+                <a (click)=" add()">Calificar</a></span>
         </button>
 
     </div>
