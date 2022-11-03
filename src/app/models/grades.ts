@@ -6,6 +6,5 @@ export interface grades {
     idGrade: any,
     grade: number,
     grades_student: students,
-    grades_subject: subject,
     grades_teacher: teachers
 }

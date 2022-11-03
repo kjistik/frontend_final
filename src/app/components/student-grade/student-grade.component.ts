@@ -83,10 +83,10 @@ export class StudentGradeComponent implements OnInit {
     this.flag2 = !this.flag2
   }
 
-  addGrade(grade: any, grades_student: students, grades_subject: subject, grades_teacher: teachers) {
+  addGrade(grade: any, grades_student: students, grades_teacher: teachers) {
     const idGrade = undefined;
-    if (grades_student && grades_subject && grades_teacher)
-      this.gradeService.addgrade({ idGrade, grade, grades_student, grades_subject, grades_teacher } as grades)
+    if (grades_student && grades_teacher)
+      this.gradeService.addgrade({ idGrade, grade, grades_student, grades_teacher } as grades)
         .subscribe((grade: grades) => {
           this.grades.push(grade);
         });

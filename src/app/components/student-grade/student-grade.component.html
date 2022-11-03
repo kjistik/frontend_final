@@ -26,5 +26,5 @@
             <option *ngFor="let g of numbers" [ngValue]="g">{{g}}</option>
         </select>
     </label>
-    <button *ngIf="student && subject && teacher" (click)="addGrade(grade ,student, subject, teacher)">añadir</button>
+    <button *ngIf="student && subject && teacher" (click)="addGrade(grade ,student, teacher)">añadir</button>
 </div>
