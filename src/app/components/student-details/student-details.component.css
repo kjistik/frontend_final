@@ -20,6 +20,7 @@ a {
     margin-top: 10px;
     height: fit-content;
     padding-bottom: 15px;
+    max-width: 1000px;
 }
 
 .name {

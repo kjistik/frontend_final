@@ -16,8 +16,7 @@
         </div>
         <ul *ngFor="let grade of grades">
             <div class="info" *ngIf="grade.grades_student.idStudent==student.idStudent">
-                <div>Asignatura: {{grade.grades_subject.subject_name}}
-                </div>
+                <div>Asignatura: {{grade.grades_subject.subject_name}}</div>
                 <div>Caificación: {{grade.grade}}</div>
                 <div>Docente: {{grade.grades_teacher.teacher_name}} {{grade.grades_teacher.teacher_lastName}}</div>
             </div>

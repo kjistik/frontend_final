@@ -17,6 +17,7 @@
     width: fit-content;
     height: fit-content;
     margin: auto;
+    max-width: 1400px  
 }
 
 .buttons {

@@ -8,7 +8,6 @@
     </label>
     <button (click)="changeFlag1()">siguiente</button>
 </div>
-
 <div *ngIf="flag1 && !flag2 && subject">
     <label for="teachers" class="input">Elija un docente:
         <select class="input" [(ngModel)]="teacher" id="teachers">
@@ -21,7 +20,6 @@
     </label>
     <button (click)="changeFlag2()">siguiente</button>
 </div>
-
 <div *ngIf="flag2">
     <label class="input" for="grade">Calificacion:
         <select class="input" id="grade" [(ngModel)]="grade">
