@@ -1,3 +1,6 @@
+#
+Este repositorio contiene el frontend de un proyecto realizado como requisito para la aprobación de las asignaturas Laboratorio de Computación III y IV, Programación III y Diseño y administración de base de datos de la Tecnicatura Universitaria en Programación de la Facultad Regional Venado Tuerto - Universidad Tecnológica Nacional a cargo de los profesores Celina Guzmán y Gustavo García
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
